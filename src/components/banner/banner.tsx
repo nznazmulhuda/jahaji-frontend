@@ -4,9 +4,6 @@
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import BannerOne from "@/assets/banner/banner-1.jpg"
-import BannerTwo from "@/assets/banner/banner-2.jpg"
-import BannerThree from "@/assets/banner/banner-3.jpg"
 
 // import required modules
 import Slide from './ui/slide';
