@@ -3,17 +3,34 @@
 import { AuthContextType } from "@/context/auth.context"
 import useUser from "@/hooks/useUser"
 import Link from "next/link"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm } from "react-hook-form"
+
+import { Button } from "@/components/ui/button"
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import formSchema from "@/schemas/login.schema"
+import { z } from "zod"
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import Login from "@/components/dialogs/login"
+
 
 function UserButton() {
   const data: AuthContextType = useUser()
 
   if (!data.user) {
     return (
-      <Link href={'/'} >
-        <button className="button">
-          Login
-        </button>
-      </Link>
+      <Login />
     )
   }
 
