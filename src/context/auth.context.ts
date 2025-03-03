@@ -1,10 +1,16 @@
+"use client"
+
+import { IUser } from "@/providers/auth.provider";
 import { createContext } from "react";
 
 export interface AuthContextType {
-  user: string | null;
+  user: IUser | null;
   isLoading: boolean;
 }
 
-const authContext = createContext<AuthContextType>({ user: null, isLoading: false });
+const AuthContext = createContext<AuthContextType>({
+  user: null,
+  isLoading: true,
+});
 
-export default authContext
+export default AuthContext

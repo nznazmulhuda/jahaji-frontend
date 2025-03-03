@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/navbar/navbar'
 import NextTopLoader from 'nextjs-toploader'
+import Authprovider from '@/providers/auth.provider'
 
 export const metadata: Metadata = {
   title: 'Jahaji',
@@ -23,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className='dark'>
+    <html lang="en" className='dark' suppressHydrationWarning>
       <body
         className={`${inter.variable} antialiased`}
       >
@@ -32,7 +33,9 @@ export default function RootLayout({
 
         <NextTopLoader />
 
-        {children}
+        <Authprovider>
+          {children}
+        </Authprovider>
       </body>
     </html>
   )

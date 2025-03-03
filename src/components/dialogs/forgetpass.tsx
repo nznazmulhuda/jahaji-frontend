@@ -1,35 +1,37 @@
 "use client"
 
-import { zodResolver } from "@hookform/resolvers/zod"
+import { z } from "zod"
 import { useForm } from "react-hook-form"
-import { FcGoogle } from "react-icons/fc";
-
-import { Button } from "@/components/ui/button"
+import { zodResolver } from "@hookform/resolvers/zod"
+import ForgetPassSchema from "@/schemas/forgetpass.schema"
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage
+} from "@/components/ui/form"
 import {
   Dialog,
   DialogContent,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog"
-import ForgetPassSchema from "@/schemas/forgetpass.schema"
-import { z } from "zod"
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
-import { Checkbox } from "@/components/ui/checkbox"
-import Link from "next/link";
 
 function Forgetpass() {
+
   const form = useForm<z.infer<typeof ForgetPassSchema>>({
     resolver: zodResolver(ForgetPassSchema),
-
     defaultValues: {
       email: "",
     },
   })
 
+  // handle forget password
   function onSubmit(values: z.infer<typeof ForgetPassSchema>) {
-    console.log(values)
+    console.log(values) // send data on provider
   }
 
   return (
