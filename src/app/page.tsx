@@ -5,9 +5,9 @@ function Homepage() {
   return (
     <main>
       {/* banner section */}
-      {/* <section className="h-[720px] flex items-center justify-center">
+      <section className="h-[720px] flex items-center justify-center">
         <Banner />
-      </section> */}
+      </section>
 
       {/* products section */}
       <section>

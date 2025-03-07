@@ -32,7 +32,7 @@ function Banner() {
               style={{
                 backgroundImage: `url(${data.image})`,
                 backgroundSize: "100% 100%",
-                objectFit: "cover"
+                objectFit: "cover",
               }}
               className='h-full flex items-center justify-center cursor-grab'
             >
