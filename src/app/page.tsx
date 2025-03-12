@@ -1,7 +1,8 @@
 import Banner from "@/components/banner/banner"
-import ProductCardSmall from "@/components/cards/product/small"
+import Products from "@/components/products/products"
 
 function Homepage() {
+
   return (
     <main>
       {/* banner section */}
@@ -10,14 +11,8 @@ function Homepage() {
       </section>
 
       {/* products section */}
-      <section>
-        <main className="container mx-auto grid grid-cols-4 gap-8">
-          {/* product cards */}
-          <ProductCardSmall />
-          <ProductCardSmall />
-          <ProductCardSmall />
-          <ProductCardSmall />
-        </main>
+      <section className="mt-10">
+        <Products />
       </section>
     </main>
   )

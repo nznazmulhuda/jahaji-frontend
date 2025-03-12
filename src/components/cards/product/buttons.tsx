@@ -1,15 +1,30 @@
 "use client"
 
 import { useState } from "react"
-export const WishlistButton = () => {
+export const WishlistButton = ({ productId }: { productId: string }) => {
   const [isHover, setIsHover] = useState(false)
-  const [isAddedToWishlist, setIsAddedToWishlist] = useState(false)
+  const [isAddedToWishlist, setIsAddedToWishlist] = useState(() => {
+    const wishlist = JSON.parse(localStorage.getItem("wishlist") || "[]")
+    return wishlist.includes(productId)
+  })
+
+  const toggleWishlist = () => {
+    const wishlist = JSON.parse(localStorage.getItem("wishlist") || "[]")
+    if (wishlist.includes(productId)) {
+      const updatedWishlist = wishlist.filter((id: string) => id !== productId)
+      localStorage.setItem("wishlist", JSON.stringify(updatedWishlist))
+    } else {
+      wishlist.push(productId)
+      localStorage.setItem("wishlist", JSON.stringify(wishlist))
+    }
+    setIsAddedToWishlist(!isAddedToWishlist)
+  }
 
   return (
     <button
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
-      onClick={() => setIsAddedToWishlist(!isAddedToWishlist)}
+      onClick={toggleWishlist}
       className="border border-[#E2E3E6] rounded-[10px] p-4 flex items-center justify-center cursor-pointer relative shadow hover:shadow-none"
     >
       <svg
@@ -43,7 +58,7 @@ export const WishlistButton = () => {
   )
 }
 
-export const AddToCartButton = () => {
+export const AddToCartButton = ({ productId }: { productId: string }) => {
   const [isHover, setIsHover] = useState(false)
 
   return (
