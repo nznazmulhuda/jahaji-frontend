@@ -1,6 +1,5 @@
 import React from 'react'
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from '../ui/dialog'
-import { Button } from '../ui/button'
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '../ui/dialog'
 import ProductSwiper from '../swiper/product.swiper'
 
 const ProductPreview: React.FC = () => {

@@ -60,6 +60,7 @@ export const WishlistButton = ({ productId }: { productId: string }) => {
 
 export const AddToCartButton = ({ productId }: { productId: string }) => {
   const [isHover, setIsHover] = useState(false)
+  console.log(productId)
 
   return (
     <button

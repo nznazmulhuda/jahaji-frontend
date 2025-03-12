@@ -1,10 +1,9 @@
 "use client"
 
 import apiClient from '@/utils/axiosInstance'
-import axios from 'axios'
 import { useEffect, useState } from 'react'
 
-function getData({ endpoint }: { endpoint: string }) {
+function useGetData({ endpoint }: { endpoint: string }) {
   const [data, setData] = useState([])
   const [error, setError] = useState(false)
   const [loading, setLoading] = useState(true)
@@ -26,4 +25,4 @@ function getData({ endpoint }: { endpoint: string }) {
   }
 }
 
-export default getData
+export default useGetData

@@ -8,7 +8,7 @@ import {
 } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import Image from "next/image"
-import { AddToCartButton, WishlistButton } from "./buttons"
+import { WishlistButton } from "./buttons"
 import { TProduct } from "@/schemas/product.interface"
 import ProductPreview from "@/components/dialogs/productPreview"
 

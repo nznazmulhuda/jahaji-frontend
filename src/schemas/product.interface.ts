@@ -1,5 +1,5 @@
 export type TReviews = {
-  userId: any;
+  userId: string;
   score: number; // Rating between 1-5 
 }
 
