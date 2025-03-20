@@ -1,0 +1,25 @@
+.footer_title {
+  color: var(--Base-01, #000);
+
+  /* Body 20 / Medium */
+  font-family: Inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  /* 150% */
+  letter-spacing: -0.8px;
+}
+
+.footer_link {
+  color: var(--Grey-06, #707378);
+
+  /* Body 18 / Medium */
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  /* 144.444% */
+  letter-spacing: -0.6px;
+}
