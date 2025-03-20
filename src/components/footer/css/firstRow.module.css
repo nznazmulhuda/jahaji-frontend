@@ -1,0 +1,58 @@
+.email_input {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 255px;
+  padding: 16px;
+  gap: 10px;
+  border-radius: 4px;
+  border: 1px solid var(--Grey-02, #E2E3E6);
+  color: var(--Grey-06, #707378);
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.button {
+  display: flex;
+  padding: 12px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  background: var(--Base-01, #000);
+  color: var(--Base-02, #FFF);
+  text-align: center;
+
+  /* Body 18 / Medium */
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 26px;
+  /* 144.444% */
+  letter-spacing: -0.6px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--Base-02, #FFF);
+  color: var(--Base-01, #000);
+}
+
+.form_description {
+  width: 260px;
+  color: var(--Grey-06, #707378);
+
+  /* Body 12 / Regular */
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* 166.667% */
+  letter-spacing: -0.3px;
+}

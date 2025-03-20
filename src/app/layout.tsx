@@ -5,6 +5,7 @@ import Navbar from '@/components/navbar/navbar'
 import NextTopLoader from 'nextjs-toploader'
 import Authprovider from '@/providers/auth.provider'
 import axios from "axios"
+import Footer from '@/components/footer/footer'
 
 export const metadata: Metadata = {
   title: 'Jahaji',
@@ -39,6 +40,9 @@ export default function RootLayout({
         <Authprovider>
           {children}
         </Authprovider>
+
+        {/* footer */}
+        <Footer />
       </body>
     </html>
   )

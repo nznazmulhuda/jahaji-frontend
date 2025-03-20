@@ -1,0 +1,26 @@
+.copyright {
+  width: 385px;
+  color: var(--Grey-06, #707378);
+
+  /* Body 12 / Regular */
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  /* 166.667% */
+  letter-spacing: -0.3px;
+}
+
+.link {
+  color: var(--Grey-06, #707378);
+
+  /* Body 16 / Medium */
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  /* 150% */
+  letter-spacing: -0.5px;
+}
