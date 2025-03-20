@@ -3,7 +3,7 @@ import FooterLinks from './footerLinks'
 
 function SecondRow() {
   return (
-    <div>
+    <div className='flex flex-wrap justify-between'>
       <FooterLinks
         title='Collection title'
         links={
