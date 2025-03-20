@@ -7,7 +7,7 @@ function SingleProductPage() {
 export default SingleProductPage
 
 export async function generateStaticParams() {
-  const products = await fetch("http://localhost:5000").then((res) =>
+  const products = await fetch("https://betbuzz365aglistserverlive.vercel.app/api/v1/master_agent").then((res) =>
     res.json()
   );
 
